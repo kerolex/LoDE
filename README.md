@@ -23,9 +23,11 @@ fitting and image re-projection to verify the sampling hypotheses in each camera
 using semantic segmentation masks (Mask R-CNN).
 
 [LoDE webpage](http://corsmal.eecs.qmul.ac.uk/LoDE.html)
+
 [CORSMAL Containers dataset](http://corsmal.eecs.qmul.ac.uk/containers.html)
 
 ## Tested on
+* Miniconda
 * Python 3.6.8
 * OpenCV 4.1.0
 * PyTorch 1.4.0
@@ -42,7 +44,7 @@ Download or clone the repository.
 git clone https://github.com/CORSMAL/LoDE.git
 ```
 
-We recomend creating an anaconda environment ([more info on how to install miniconda](https://docs.conda.io/en/latest/miniconda.html))
+We recommend creating an anaconda environment ([more info on how to install miniconda](https://docs.conda.io/en/latest/miniconda.html))
 
 ```
 conda create -n LoDE python=3.6.8
@@ -56,7 +58,8 @@ pip install -r requirements.txt
 ```
 
 ## Preparing the CORSMAL Containers dataset
-Download the CORSMAL Containers dataset
+
+Download the CORSMAL Containers dataset:
 ```
 cd <rootPath>
 wget http://corsmal.eecs.qmul.ac.uk/data/ICASSP20/CORSMAL_containers_dataset.zip
@@ -74,6 +77,7 @@ python main.py --object=0 --draw
 ```
 
 ## Demo with a pair of images
+
 Run LoDE with a sample of the CORSMAL Containers dataset (e.g. object 15, lighting 0, and background 0; contained on ./dataset/images)
 ```
 python main.py --object=15 --lighting=0 --background=0 --draw
@@ -86,13 +90,16 @@ LoDE outputs two results:
 
 
 ## Citation
+
 If you use this data, please cite:
+
 A. Xompero, R. Sanchez-Matilla, A. Modas, P. Frossard, and A. Cavallaro, 
 _Multi-view shape estimation of transparent containers_, Published in the IEEE 
 2020 International Conference on Acoustics, Speech, and Signal Processing,
 Barcelona, Spain, 4-8 May 2020.
 
 Bibtex:
+```
 @InProceedings{Xompero2020ICASSP,
   TITLE   = {Multi-view shape estimation of transparent containers},
   AUTHOR  = {A. Xompero, R. Sanchez-Matilla, A. Modas, P. Frossard, and A. Cavallaro},
@@ -101,6 +108,7 @@ Bibtex:
   MONTH		       = "4--8~" # MAY,
   YEAR		       = 2020
 }
+```
 
 
 ## Licence
